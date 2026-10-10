@@ -11,7 +11,6 @@ import {
     Lock,
     ShieldCheck,
     User,
-    XCircle,
 } from "lucide-react"
 
 import { getAdminUserById } from "../../api/adminUsersApi.js"
