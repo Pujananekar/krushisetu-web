@@ -537,13 +537,13 @@ const ApplicationEditor = () => {
                         },
                     )}
 
-                    {renderField(
+                    {type !== "INTERNSHIP" && (renderField(
                         "Mobile",
                         "mobile",
                         {
                             required: true,
                         },
-                    )}
+                    ))}
                 </div>
             </Section>
         )
