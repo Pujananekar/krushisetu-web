@@ -61,7 +61,7 @@ const EnquiryDetails = lazy(() => import("./pages/crm/EnquiryDetails.jsx"));
 
 // Administration
 const AdminUsers = lazy(() => import("./pages/administration/AdminUsers"));
-const AdminUserDetails = lazy(() => import("./pages/administration/AdminUserDetails.jsx"));
+const AdminUserDetails = lazy(() => import("./pages/administration/AdminUserDetails"));
 const AdminUserEditor = lazy(() => import("./pages/administration/AdminUserEditor"));
 const Roles = lazy(() => import("./pages/administration/Roles"));
 const RoleDetails = lazy(() => import("./pages/administration/RoleDetails.jsx"));
