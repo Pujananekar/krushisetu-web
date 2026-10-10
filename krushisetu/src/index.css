@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "./styles/interactions.css";
+
+html{
+    scroll-behavior: smooth;
+}
+
+.scrollbar-none{
+    scrollbar-width:none;
+    -ms-overflow-style:none
+}
+
+.scrollbar-none::-webkit-scrollbar{
+    display:none
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,51 @@
+.kr-hover-card {
+    transition:
+        transform 300ms ease,
+        box-shadow 300ms ease,
+        border-color 300ms ease;
+}
+
+.kr-hover-card:hover {
+    transform: translateY(-4px);
+    border-color: rgb(187 247 208);
+    box-shadow: 0 20px 25px -5px rgb(20 83 45 / 0.1), 0 8px 10px -6px rgb(20 83 45 / 0.1);
+}
+
+.kr-hover-icon {
+    transition:
+        transform 300ms ease,
+        background-color 300ms ease,
+        color 300ms ease,
+        box-shadow 300ms ease;
+}
+
+.kr-hover-card:hover .kr-hover-icon {
+    transform: scale(1.08);
+    background-color: rgb(21 128 61);
+    color: white;
+    box-shadow: 0 10px 15px -3px rgb(20 83 45 / 0.2);
+}
+
+.kr-hover-title {
+    transition: color 300ms ease;
+}
+
+.kr-hover-card:hover .kr-hover-title {
+    color: rgb(22 101 52);
+}
+
+.kr-hover-arrow {
+    transition: transform 300ms ease;
+}
+
+.kr-hover-card:hover .kr-hover-arrow {
+    transform: translateX(4px);
+}
+
+.kr-hover-line {
+    transition: width 300ms ease;
+}
+
+.kr-hover-card:hover .kr-hover-line {
+    width: 4rem;
+}
