@@ -452,7 +452,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
 
                         {/* Audit Logs */}
 
-                        {hasPermission("audit_logs.view") && (
+                        {/* {hasPermission("audit_logs.view") && (
                             <SidebarItem
                                 to="/admin/administration/audit-logs"
                                 label="Audit Logs"
@@ -462,7 +462,7 @@ const AdminSidebar = ({ isOpen, onClose }) => {
                                 )}
                                 onClick={closeMobileSidebar}
                             />
-                        )}
+                        )} */}
 
                     </SidebarSection>
 

@@ -67,7 +67,7 @@ const Roles = lazy(() => import("./pages/administration/Roles"));
 const RoleDetails = lazy(() => import("./pages/administration/RoleDetails.jsx"));
 const RoleEditor = lazy(() => import("./pages/administration/RoleEditor"));
 const Settings = lazy(() => import("./pages/administration/Settings"));
-const AuditLogs = lazy(() => import("./pages/administration/AuditLogs"));
+// const AuditLogs = lazy(() => import("./pages/administration/AuditLogs"));
 
 const AdminPageLoader = () => (
     <div className="flex min-h-[50vh] items-center justify-center">
@@ -264,10 +264,10 @@ const AdminRoutes = () => {
                             element={<RoleDetails />}
                         />
 
-                        <Route
+                        {/* <Route
                             path="administration/audit-logs"
                             element={<AuditLogs />}
-                        />
+                        /> */}
                         <Route
                             path="administration/settings"
                             element={<Settings />}
