@@ -26,7 +26,7 @@ export default function Login() {
         mutationFn: adminLogin,
 
         onSuccess: async (data) => {
-            console.log("Login response:", data);
+
 
             if (!data?.success) {
                 setError(
@@ -55,11 +55,6 @@ export default function Login() {
 
                     return;
                 }
-
-                console.log(
-                    "Logged in admin:",
-                    sessionData?.admin
-                );
 
                 setError("");
 
