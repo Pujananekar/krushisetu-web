@@ -38,7 +38,7 @@ const ProjectsHero = () => {
 
                         <div className="mt-8 flex flex-wrap gap-4">
                             <a
-                                href="#projects"
+                                href="#projects-grid"
                                 className="group/projects-explore kr-hover-button flex items-center gap-3 rounded-2xl bg-green-700 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-green-900/20 hover:bg-green-800 hover:shadow-xl hover:shadow-green-900/20"
                             >
                                 Explore Projects

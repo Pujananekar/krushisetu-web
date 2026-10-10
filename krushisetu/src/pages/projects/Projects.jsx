@@ -8,7 +8,7 @@ const Projects = () => {
         <main className="min-h-screen bg-[#F6FAF7]">
             <ProjectsHero />
             <ProjectCategories />
-            <ProjectGrid />
+            {/* <ProjectGrid /> */}
             <ProjectsCTA />
         </main>
     )

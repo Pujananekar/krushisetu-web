@@ -44,7 +44,7 @@ const ProjectCategories = () => {
     }
 
     return (
-        <section className="px-6 py-16 sm:px-8 lg:px-12 xl:px-16">
+        <section id="projects-grid" className="px-6 py-16 sm:px-8 lg:px-12 xl:px-16">
             <div className="mx-auto max-w-350">
                 <div className="max-w-3xl">
                     <p className="text-sm font-bold uppercase tracking-[0.2em] text-green-700">
