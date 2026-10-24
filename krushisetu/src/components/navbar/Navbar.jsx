@@ -4,6 +4,7 @@ import DesktopNav from "./DesktopNav"
 import GetStartedButton from "./GetStartedButton"
 import MobileMenuButton from "./MobileMenuButton"
 import MobileMenu from "./MobileMenu"
+import LanguageSwitcher from "./LanguageSwitcher"
 
 const navLinks = [
     {
@@ -61,7 +62,7 @@ const navLinks = [
         path: "/gallery",
     },
     {
-        name: "Join / Apply",
+        name: "Join",
         path: "/apply",
         children: [
             {
@@ -102,6 +103,7 @@ const Navbar = () => {
 
                 <DesktopNav navLinks={navLinks} />
 
+                <LanguageSwitcher />
 
                 <GetStartedButton />
 

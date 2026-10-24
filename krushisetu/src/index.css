@@ -25,3 +25,31 @@ html{
         transform: translateY(0);
     }
 }
+
+
+/* Hide Google's default translation banner and widget UI */
+.goog-te-banner-frame,
+.goog-te-gadget-icon,
+.goog-te-balloon-frame,
+body > .skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-gadget {
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+#google_translate_element {
+  display: none !important;
+}
+
+/* Prevent Google's translated tooltip styling from disrupting the UI */
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
