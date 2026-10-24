@@ -7,7 +7,7 @@ import Footer from "./components/footer/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import EmergencyBanner from "./components/common/EmergencyBanner";
 
-// Public pages: lazy-loaded
+// Public pages: lazy-loading
 const HomePage = lazy(() => import("./pages/home/HomePage"));
 
 const Department = lazy(() => import("./pages/departments/Department"));
