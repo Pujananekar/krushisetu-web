@@ -1,24 +1,66 @@
-import { Link } from "react-router-dom"
-import useSiteSettings from "../../hooks/useSiteSettings.js"
+
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import useSiteSettings from "../../hooks/useSiteSettings.js";
 
 const NavbarLogo = ({ onClick }) => {
+  const { data: settings } = useSiteSettings();
+  const [language, setLanguage] = useState("en");
 
+  useEffect(() => {
+    const detectLanguage = () => {
+      const match = document.cookie.match(
+        /(?:^|;\s*)googtrans=([^;]+)/
+      );
 
-    const {
-        data : settings,
-        } = useSiteSettings()
+      if (match) {
+        const parts = decodeURIComponent(match[1]).split("/");
+        const selectedLanguage = parts[parts.length - 1];
 
-    const siteName = settings?.englishName || "Krushisetu"
+        setLanguage(
+          ["en", "mr", "hi"].includes(selectedLanguage)
+            ? selectedLanguage
+            : "en"
+        );
+      } else {
+        setLanguage("en");
+      }
+    };
 
-    return (
-        <Link to="/" onClick={onClick} className="flex items-center gap-3 shrink-0">
-            <img className="h-11 w-11 shrink-0 object-contain" src={`${import.meta.env.BASE_URL}images/leaf_img.png`} alt="Krushisetu" />
+    detectLanguage();
 
-            <h1 className="whitespace-nowrap text-xl md:text-2xl font-bold tracking-[-0.03em] text-green-900">
-                {siteName}
-            </h1>
-        </Link>
-    )
-}
+    const interval = window.setInterval(detectLanguage, 500);
 
-export default NavbarLogo
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const siteName =
+    language === "mr"
+      ? settings?.marathiName || "कृषीसेतू"
+      : language === "hi"
+        ? settings?.hindiName || "कृषिसेतु"
+        : settings?.englishName || "Krushisetu";
+
+  return (
+    <Link
+      to="/"
+      onClick={onClick}
+      className="flex shrink-0 items-center gap-3"
+    >
+      <img
+        className="h-11 w-11 shrink-0 object-contain"
+        src={`${import.meta.env.BASE_URL}images/leaf_img.png`}
+        alt={siteName}
+      />
+
+      <h1
+        translate="no"
+        className="notranslate whitespace-nowrap text-xl font-bold tracking-[-0.03em] text-green-900 md:text-2xl"
+      >
+        {siteName}
+      </h1>
+    </Link>
+  );
+};
+
+export default NavbarLogo;
